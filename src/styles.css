@@ -1,0 +1,69 @@
+.App {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-gap: 0.5rem;
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  place-content: center;
+}
+
+.photo {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.photo-artwork {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-overlay {
+  background-color: #d9c00e30;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  transition: 0.2s ease;
+  transform: translateY(100%);
+}
+
+.photo:hover .photo-overlay {
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.h1 {
+  grid-column: span 1;
+}
+.h2 {
+  grid-column: span 2;
+}
+.h3 {
+  grid-column: span 3;
+}
+.h4 {
+  grid-column: span 4;
+}
+.v1 {
+  grid-row: span 1;
+}
+.v2 {
+  grid-row: span 2;
+}
+.v3 {
+  grid-row: span 3;
+}
+.v4 {
+  grid-row: span 4;
+}
